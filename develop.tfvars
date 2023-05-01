@@ -1,4 +1,4 @@
-logged_user_objectId = "21e6047a-01cb-4e21-8555-e29599d9b1d0"
+# logged_user_objectId = "$(az ad signed-in-user show --query id -o tsv)" ## Tylko jeśli uzyto modułu CAF < 5.7.0
 
 global_settings = {
   default_region = "region1"
