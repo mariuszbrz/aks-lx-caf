@@ -1,6 +1,6 @@
 Powołanie infrastruktury:
 
-Projekt mający na celu ułatwienie wystawiania infrastruktury w oparciu o 
+Projekt mający na celu ułatwienie wystawiania infrastruktury w oparciu o [Terraform supermodule for the Terraform platform engineering for Azure](https://registry.terraform.io/modules/aztfmod/caf/azurerm/latest)
 
 Powołanie środowiska:
 ```
@@ -23,3 +23,11 @@ Zniszczenie wszystkich zasobów w danej subskrypcji (linux):
 ```
 az group list -o json | jq '.[] | .name' | xargs -L1 bash -c 'az group delete -n $0 --no-wait -y'
 ```
+
+Istotne parametry zdefiniowane w przykładowym pliku develop.tfvars:
+
+| Atrybut | przykładowa wartość | znaczenie |
+|---|---|---|
+| default_node_pool['vm_size'] | Standard_B2s | definiuje wielkość maszyny składowej klastra AKS |
+| global_settings['regions']['region1'] | westeurope | definiuje region, w którym powoływane są zasoby |
+| aks_clusters['cluster_dev1']['name'] | akscluster-dev1-001 | nazwa powoływanego klastra |
