@@ -16,7 +16,7 @@ kubectl get nodes
 ```
 Zniszczenie powołanego środowiska z użyciem terraform:
 ```
-terraform plan -out aks-dev.destroy -var-file=develop.tfvars
+terraform plan -destroy -out aks-dev.destroy -var-file=develop.tfvars
 terraform apply "aks-dev.destroy"
 ```
 Zniszczenie wszystkich zasobów w danej subskrypcji (linux):
