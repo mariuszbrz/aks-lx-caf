@@ -121,7 +121,7 @@ spoke_aks_dev1 = {
         enforce_private_link_endpoint_network_policies = true
       }
       jumpbox = {
-        name    = "jumpbox-ecommerce"
+        name    = "jumpbox-develop"
         cidr    = ["10.63.51.128/27"]
         nsg_key = "azure_bastion_nsg"
       }
