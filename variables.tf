@@ -19,3 +19,6 @@ variable "aks_clusters" {
 variable "logged_user_objectId" {
   default = {}
 }
+variable "role_mapping" {
+  default = {}
+}
